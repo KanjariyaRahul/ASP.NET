@@ -3,10 +3,11 @@
     "",
     "\\firstproject",
     "\\firstproject\\App_Data",
+    "\\firstproject\\Controllers",
     "\\firstproject\\Models",
     "\\firstproject\\Views",
     "\\firstproject\\Views\\Home"
   ],
-  "SelectedNode": "\\firstproject\\Models",
+  "SelectedNode": "\\firstproject.sln",
   "PreviewInSolutionExplorer": false
 }

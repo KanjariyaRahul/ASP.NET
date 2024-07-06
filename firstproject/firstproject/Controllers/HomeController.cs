@@ -12,12 +12,7 @@ namespace firstproject.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            //Student s = new Student();
-            //s.Id = 1;
-            //s.Name = "rahul";
-            //s.PhoneNumber = 9265614292;
-
-            //string[] Name = {"rahul", "raj" , "jay" , "meet"};
+            
 
             List<Student> list = new List<Student>() {
           new Student() {
@@ -35,10 +30,18 @@ namespace firstproject.Controllers
         }
         public ActionResult About()
         {
+           
+            string[] Name = {"rahul", "raj" , "jay" , "meet"};
+            ViewBag.name = Name;
             return View();
         }
         public ActionResult Contact()
         {
+
+            ViewData.Add("id", 1);
+    
+            //ViewData["name"] = Name;
+        
             return View();
         }
     }

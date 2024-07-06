@@ -10,8 +10,6 @@ namespace firstproject.Models
         public int Id { get; set; }
 
         public String Name { get; set; }
-
-
         public  Int64 PhoneNumber { get; set; }
     }
 }

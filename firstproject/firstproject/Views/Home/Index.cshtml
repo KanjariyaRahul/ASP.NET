@@ -66,7 +66,21 @@
                     </tbody>
                 }
                 </table>
-       
+        @helper Mydata(string[] temp)
+        {
+            <ul style=" background : white">
+                @foreach(var item in temp)
+                { 
+                    <li>@item</li>
+                }
+            </ul>
+        }
+        <div>
+            Country List 
+            @Mydata(new string[] {"India " , " pakistan"}) 
+            Country List 
+            @Mydata(new string[] {"bagladesh " , " pakistan"})
+        </div>
         
         
 

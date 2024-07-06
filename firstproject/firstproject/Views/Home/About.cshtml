@@ -44,7 +44,26 @@
         </ul>
 
         <h1>This About Page</h1>
+        <table style="border: 1px solid black; border-collapse: collapse;">
+            <caption style="caption-side: top; font-weight: bold;">Student Data</caption>
+            <thead>
+                <tr>
+                    <th style="border: 1px solid black; padding: 8px;">Name</th>
         
+                </tr>
+            </thead>
+
+            @foreach (var item in ViewBag.Name)
+            {
+                <tbody>
+                    <tr>
+                        <td style="border: 1px solid black; padding: 86fpx;">@item</td>
+                        
+                    </tr>
+
+                </tbody>
+            }
+        </table>
 
 
     </div>
