@@ -11,5 +11,9 @@ namespace firstproject.Models
 
         public String Name { get; set; }
         public  Int64 PhoneNumber { get; set; }
+
+        public double Input1 { get; set; }
+        public double Input2 { get; set; }
+        public double Result { get; set; }
     }
 }

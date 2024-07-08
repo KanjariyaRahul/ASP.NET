@@ -22,17 +22,17 @@
             float: left;
         }
 
-        li a {
+            li a {
                 display: block;
                 color: white;
                 text-align: center;
                 padding: 14px 16px;
                 text-decoration: none;
-        }
+            }
 
-        li a:hover {
-           background-color: #111;
-        }
+                li a:hover {
+                    background-color: #111;
+                }
     </style>
 </head>
 <body>
@@ -41,6 +41,7 @@
             <li><a class="active" href="./Index">Home</a></li>
             <li><a href="./About">About</a></li>
             <li><a href="./Contact">Contact</a></li>
+            <li><a href="./Calculate">Calculate</a></li>
         </ul>
 
         <h1>This Home Page</h1>
@@ -53,37 +54,39 @@
                     <th style="border: 1px solid black; padding: 8px;">Phone Number</th>
                 </tr>
             </thead>
-            
-                @foreach (var item in ViewBag.model)
-                {
-                    <tbody>
-                        <tr>
-                            <td style="border: 1px solid black; padding: 86fpx;">@item.Id</td>
-                            <td style="border: 1px solid black; padding: 8px;">@item.Name</td>
-                            <td style="border: 1px solid black; padding: 8px;">@item.PhoneNumber</td>
-                        </tr>
 
-                    </tbody>
-                }
-                </table>
+            @foreach (var item in ViewBag.model)
+            {
+                <tbody>
+                    <tr>
+                        <td style="border: 1px solid black; padding: 86fpx;">@item.Id</td>
+                        <td style="border: 1px solid black; padding: 8px;">@item.Name</td>
+                        <td style="border: 1px solid black; padding: 8px;">@item.PhoneNumber</td>
+                    </tr>
+
+                </tbody>
+            }
+        </table>
         @helper Mydata(string[] temp)
         {
             <ul style=" background : white">
-                @foreach(var item in temp)
-                { 
+                @foreach (var item in temp)
+                {
                     <li>@item</li>
                 }
             </ul>
         }
         <div>
-            Country List 
-            @Mydata(new string[] {"India " , " pakistan"}) 
-            Country List 
-            @Mydata(new string[] {"bagladesh " , " pakistan"})
+            Country List
+            @Mydata(new string[] { "India ", " pakistan" })
+            Country List
+            @Mydata(new string[] { "bagladesh ", " pakistan" })
         </div>
-        
-        
 
+       
+
+
+    
     </div>
 </body>
 </html>

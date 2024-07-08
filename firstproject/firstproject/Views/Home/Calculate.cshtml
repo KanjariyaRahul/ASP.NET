@@ -1,0 +1,49 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Calculate</title>
+</head>
+<body>
+    <div>
+        <form class="container" method="post" action="./Calculate">
+            <h1></h1>
+            <div class="form-group ">
+                <label>First Number</label>
+                <input type="number" class="form-control" id="num1" name="num1" placeholder="Enter the First value">
+
+            </div>
+            <div class="form-group">
+                <label>Seconde Number</label>
+                <input type="number" class="form-control" id="num2" name="num2" placeholder="Enter the Seconde value">
+            </div>
+
+            <button type="submit" value="add" class="btn btn-primary" name="operation">Addition  </button>
+            <button type="submit" value="subtract" class="btn btn-primary" name="operation">Subtraction</button>
+            <button type="submit"  value="mul" class="btn btn-primary" name="operation">Multiplication </button>
+            <button type="submit" value="div" class="btn btn-primary" name="operation">Division</button>
+        </form>
+
+        @if(ViewBag.Result != null)
+            {
+                <div class="result">
+                    Result : @ViewBag.Result
+                </div>
+            }
+        @if(ViewBag.Error != null)
+            {
+                <div>
+                    @ViewBag.Error
+                </div>
+            }
+    </div>
+</body>
+</html>
