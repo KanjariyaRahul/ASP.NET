@@ -7,13 +7,15 @@
 <div class="row">
     <h2>List of Items</h2>
 
-    <table class="table">
+    <table class="table ">
         <thead>
             <tr>
                 <th>Name</th>
                 <th>Value</th>
                 <th>Name Length</th>
-                <th> Reverse Name</th>
+                <th>Reversed Name</th>
+                <th>Status</th>
+                
             </tr>
         </thead>
         <tbody>
@@ -21,14 +23,19 @@
                 bool isEven = false;
                 foreach (var item in Model)
                 {
-                    string reversedName = new string(item.Name.Reverse().ToArray());
+                   
+                   
+                        string reversedName = new string(item.Name.Reverse().ToArray());
                         <tr style="background-color: @(isEven ? "#71C0CB" : "#C8C8C8")">
                             <td>@item.Name</td>
                             <td>@item.Value</td>
                             <td>@item.Name.Length</td>
-                            <td>@</td>
+                            <td>@reversedName</td>
+                            <td>@(item.Age < 22 ? "Unselected" : "Selected")</td>
+
                         </tr>
-                    isEven = !isEven;
+                        isEven = !isEven;
+                    
                 }
             }
         </tbody>

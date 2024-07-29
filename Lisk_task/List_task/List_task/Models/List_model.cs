@@ -9,6 +9,7 @@ namespace List_task.Models
     {
         public string Name { get; set; }
         public int Value { get; set; }
+        public int Age { get; set; }
         public string ColorClass { get; set; }
 
     }
