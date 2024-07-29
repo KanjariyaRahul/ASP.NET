@@ -13,13 +13,13 @@ namespace List_task.Controllers
         {
             List<List_model> items = new List<List_model>
         {
-            new List_model { Name = "Item 1", Value = 10 },
-            new List_model { Name = "Item 2", Value = 20 },
-            new List_model { Name = "Item 3", Value = 5 },
-            new List_model { Name = "Item 4", Value = 50 },
-            new List_model { Name = "Item 5", Value = 60},
-            new List_model { Name = "Item 6", Value = 70},
-            new List_model { Name = "Item 7", Value = 80 }
+            new List_model { Name = "jay", Value = 10 },
+            new List_model { Name = "dhaval", Value = 20 },
+            new List_model { Name = "yash", Value = 5 },
+            new List_model { Name = "jeet", Value = 50 },
+            new List_model { Name = "rahul", Value = 60},
+            new List_model { Name = "mahaveer", Value = 70},
+            new List_model { Name = "parash", Value = 80 }
         };
 
    
