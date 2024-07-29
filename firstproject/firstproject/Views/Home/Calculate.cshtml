@@ -26,21 +26,21 @@
                 <input type="number" class="form-control" id="num2" name="num2" placeholder="Enter the Seconde value">
             </div>
 
-            <button type="submit" value="add" class="btn btn-primary" name="operation">Addition  </button>
-            <button type="submit" value="subtract" class="btn btn-primary" name="operation">Subtraction</button>
-            <button type="submit"  value="mul" class="btn btn-primary" name="operation">Multiplication </button>
-            <button type="submit" value="div" class="btn btn-primary" name="operation">Division</button>
+            <button type="submit" value="add" class="btn btn-primary" name="operation"><h3>+</h3>  </button>
+            <button type="submit" value="subtract" class="btn btn-primary" name="operation"><h3>-</h3></button>
+            <button type="submit"  value="mul" class="btn btn-primary" name="operation"><h3>x</h3></button>
+            <button type="submit" value="div" class="btn btn-primary" name="operation"><h3>/</h3></button>
         </form>
 
         @if(ViewBag.Result != null)
             {
-                <div class="result">
+                <div  class="alert alert-primary result mt-3" role="alert">
                     Result : @ViewBag.Result
                 </div>
             }
         @if(ViewBag.Error != null)
             {
-                <div>
+                <div class="alert alert-danger mt-3" role="alert">
                     @ViewBag.Error
                 </div>
             }

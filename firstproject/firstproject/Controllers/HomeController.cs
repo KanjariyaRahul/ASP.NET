@@ -77,6 +77,7 @@ namespace firstproject.Controllers
         {
 
             ViewData.Add("id", 1);
+
     
             //ViewData["name"] = Name;
         

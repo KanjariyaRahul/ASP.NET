@@ -1,0 +1,29 @@
+﻿@model List<List_task.Models.List_model>
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+
+
+<div class="row">
+    <h2>List of Items</h2>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (int i = 0; i < Model.Count; i++)
+            {
+            <tr style="background-color: @(i % 2 == 0 ? "#71C0CB" : "#C8C8C8")">
+                <td>@Model[i].Name</td>
+                <td>@Model[i].Value</td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>
