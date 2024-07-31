@@ -9,6 +9,12 @@
 
 @using (Html.BeginForm("Index", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
-    <input type="file" name="f" />
+    <input type="file" name="file" />
     <input type="submit" value="Upload" />
+}
+
+@if (ViewBag.ImagePath != null)
+{
+    <h3>Uploaded Image:</h3>
+    <img src="@ViewBag.ImagePath" alt="Uploaded Image" style="max-width: 100%; height: auto;" />
 }
