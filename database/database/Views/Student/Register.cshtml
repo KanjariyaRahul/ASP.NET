@@ -1,0 +1,17 @@
+﻿@model database.Models.Stud
+@{
+    ViewBag.Title = "Register";
+}
+
+<h2>Register</h2>
+
+@using(Html.BeginForm("Register", "Student" ,FormMethod.Post))
+ {
+    @Html.TextBoxFor(m => m.fname)
+    <br />
+    @Html.TextBoxFor(m => m.lname)
+    <br />
+
+    <input type="submit" value="submit"/>
+ }
+
