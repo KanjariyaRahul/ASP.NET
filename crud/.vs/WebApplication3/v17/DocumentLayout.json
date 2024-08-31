@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\ASP\\WebApplication3\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1EF7138E-0D1C-4C86-8D33-F15CD37E8FC4}|WebApplication3\\WebApplication3.csproj|c:\\asp\\webapplication3\\webapplication3\\views\\student\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1EF7138E-0D1C-4C86-8D33-F15CD37E8FC4}|WebApplication3\\WebApplication3.csproj|solutionrelative:webapplication3\\views\\student\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1EF7138E-0D1C-4C86-8D33-F15CD37E8FC4}|WebApplication3\\WebApplication3.csproj|C:\\ASP\\WebApplication3\\webapplication3\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1EF7138E-0D1C-4C86-8D33-F15CD37E8FC4}|WebApplication3\\WebApplication3.csproj|solutionrelative:webapplication3\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1EF7138E-0D1C-4C86-8D33-F15CD37E8FC4}|WebApplication3\\WebApplication3.csproj|C:\\ASP\\WebApplication3\\webapplication3\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1EF7138E-0D1C-4C86-8D33-F15CD37E8FC4}|WebApplication3\\WebApplication3.csproj|solutionrelative:webapplication3\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\ASP\\WebApplication3\\WebApplication3\\Views\\Student\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebApplication3\\Views\\Student\\Index.cshtml",
+              "ToolTip": "C:\\ASP\\WebApplication3\\WebApplication3\\Views\\Student\\Index.cshtml",
+              "RelativeToolTip": "WebApplication3\\Views\\Student\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-09T02:26:36.127Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Student.cs",
+              "DocumentMoniker": "C:\\ASP\\WebApplication3\\WebApplication3\\Models\\Student.cs",
+              "RelativeDocumentMoniker": "WebApplication3\\Models\\Student.cs",
+              "ToolTip": "C:\\ASP\\WebApplication3\\WebApplication3\\Models\\Student.cs",
+              "RelativeToolTip": "WebApplication3\\Models\\Student.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-09T02:20:35.801Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "StudentController.cs",
+              "DocumentMoniker": "C:\\ASP\\WebApplication3\\WebApplication3\\Controllers\\StudentController.cs",
+              "RelativeDocumentMoniker": "WebApplication3\\Controllers\\StudentController.cs",
+              "ToolTip": "C:\\ASP\\WebApplication3\\WebApplication3\\Controllers\\StudentController.cs",
+              "RelativeToolTip": "WebApplication3\\Controllers\\StudentController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADMAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-09T02:20:09.326Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

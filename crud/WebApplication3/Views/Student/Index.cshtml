@@ -1,0 +1,42 @@
+﻿@model List<WebApplication3.Models.Student>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+@using (Html.BeginForm("DeleteSelected", "Student", FormMethod.Post))
+{
+    <table style="border-collapse: collapse; width: 100%; border: 1px solid black;">
+        <thead>
+            <tr>
+                <th style="border: 1px solid black; padding: 8px;">
+                    Delete
+                </th>
+                <th style="border: 1px solid black; padding: 8px;">ID</th>
+                <th style="border: 1px solid black; padding: 8px;">First Name</th>
+                <th style="border: 1px solid black; padding: 8px;">Last Name</th>
+                <th style="border: 1px solid black; padding: 8px;">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td style="border: 1px solid black; padding: 8px;">
+                    <input type="checkbox" name="selectedIds" value="@item.Id" />
+                </td>
+                <td style="border: 1px solid black; padding: 8px;">@item.Id</td>
+                <td style="border: 1px solid black; padding: 8px;">@item.fname</td>
+                <td style="border: 1px solid black; padding: 8px;">@item.lname</td>
+                <td style="border: 1px solid black; padding: 8px;">
+                    @Html.ActionLink("Edit", "Registration", new { id = item.Id })
+                </td>
+                <td style="border: 1px solid black; padding: 8px;">
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { onclick = "return confirm('Are you sure you want to delete this item?');" })
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+    <input type="submit" value="Delete Selected" />
+}
