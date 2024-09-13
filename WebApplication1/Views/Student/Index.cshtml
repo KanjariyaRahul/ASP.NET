@@ -1,0 +1,133 @@
+﻿@model List<WebApplication1.Models.Student>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Management</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        .container {
+            max-width: 1200px;
+            margin-top: 20px;
+        }
+
+        .btn-margin {
+            margin-bottom: 20px;
+        }
+
+        .form-control {
+            display: inline-block;
+            width: auto;
+        }
+
+        .table th, .table td {
+            text-align: center;
+        }
+
+        .form-check {
+            margin-bottom: 10px;
+        }
+
+            .form-check label {
+                margin-left: 5px;
+            }
+
+        .search-row {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="mb-4">Student Management</h2>
+
+        <!-- Search Form -->
+        <form method="get" action="/Student/Index" class="mb-4">
+            <div class="form-row align-items-center search-row">
+                <div class="col-md-3">
+                    <input type="text" id="searchFirstName" name="searchFirstName" class="form-control" value="@Request.QueryString["searchFirstName"]" placeholder="First Name" />
+                </div>
+                <div class="col-md-3">
+                    <input type="text" id="searchLastName" name="searchLastName" class="form-control" value="@Request.QueryString["searchLastName"]" placeholder="Last Name" />
+                </div>
+                <div class="col-md-3">
+                    <input type="text" id="searchFullName" name="searchFullName" class="form-control" value="@Request.QueryString["searchFullName"]" placeholder="Full Name" />
+                </div>
+                <div class="col-md-3">
+                    <button type="submit" class="btn btn-primary btn-block">Search</button>
+                </div>
+            </div>
+
+            <div class="form-row align-items-center">
+                <div class="col-md-6">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" id="searchByFirstName" name="searchBy" value="firstName" @if (Request.QueryString["searchBy"] == "firstName") { <text> checked</text> } />
+                        <label class="form-check-label" for="searchByFirstName">Search by First Name</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" id="searchByLastName" name="searchBy" value="lastName" @if (Request.QueryString["searchBy"] == "lastName") { <text> checked</text> } />
+                        <label class="form-check-label" for="searchByLastName">Search by Last Name</label>
+                    </div>
+                </div>
+                <div class="col-md-6 text-right">
+                    <a href="/Student/Index" class="btn btn-secondary">Clear</a>
+                </div>
+            </div>
+        </form>
+
+        <a href="/Student/insert" class="btn btn-success btn-margin">Add Record</a>
+
+        <!-- Delete Form -->
+        <form id="deleteForm" method="post" action="/Student/DeleteSelected">
+            <table class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th><input type="checkbox" id="selectAll" /></th>
+                        <th>#</th> <!-- Serial Number Column -->
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (int i = 0; i < Model.Count; i++)
+                    {
+                        var item = Model[i];
+                        <tr>
+                            <td><input type="checkbox" name="selectedIds" value="@item.Id" /></td>
+                            <td>@(i + 1)</td> <!-- Serial Number -->
+                            <td>@item.fname</td>
+                            <td>@item.lname</td>
+                            <td>
+                                <a href="/Student/insert?id=@item.Id&mode=E" class="btn btn-warning btn-sm">Edit</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <button type="submit" class="btn btn-danger btn-block" onclick="return deletealert()">Delete Selected Records</button>
+        </form>
+    </div>
+
+    <!-- Optional: Include Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <script>
+        function deletealert() {
+            return confirm("Are you sure you want to delete the selected records?");
+        }
+
+        document.getElementById('selectAll').addEventListener('click', function () {
+            var checkboxes = document.querySelectorAll('input[name="selectedIds"]');
+            for (var checkbox of checkboxes) {
+                checkbox.checked = this.checked;
+            }
+        });
+    </script>
+</body>
+</html>
